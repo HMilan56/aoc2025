@@ -1,7 +1,7 @@
 defmodule Day2 do
   def solve() do
     File.read!("input.txt")
-    |> String.trim("\n")
+    |> String.trim()
     |> String.split(",")
     |> Enum.map(&String.split(&1, "-"))
     |> Enum.reduce(0, fn range, invalid_sum ->

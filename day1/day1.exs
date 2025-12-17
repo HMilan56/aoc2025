@@ -1,8 +1,7 @@
 defmodule Day1 do
     def solve() do
         File.read!("input.txt")
-            |> String.split("\r\n")
-            |> IO.inspect()
+            |> String.split(["\n", "\r\n"], trim: true)
             |> Enum.map(fn line ->
                 {dir, rot} = String.split_at(line, 1)
                 rot = String.to_integer(rot)
